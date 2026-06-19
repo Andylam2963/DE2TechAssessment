@@ -21,7 +21,7 @@ Don't:
 - Sparse or absent documentation
 - Code which is hard to read
 ---
-## Section1: Data Pipelines
+## Section 1: Data Pipelines
 An e-commerce company requires that users sign up for a membership on the website in order to purchase a product from the platform. As a data engineer under this company, you are tasked with designing and implementing a pipeline to process the membership applications submitted by users on an hourly interval.
 
 Applications are batched into a varying number of datasets and dropped into a folder on an hourly basis. You are required to set up a pipeline to ingest, clean, perform validity checks, and create membership IDs for successful applications. An application is successful if:
@@ -44,12 +44,12 @@ You can use common scheduling solutions such as cron or airflow to implement the
 
 Note: Please submit the processed dataset and scripts used
 
-## Section2: Databases
+## Section 2: Databases
 
 You are the tech lead for an e-commerce company that operates on the cloud. The company allows users to sign up as members on their website and make purchases on items listed. You are required to design and implement a pipeline that processes membership applications and determine if an application is successful or unsuccessful. Applications are dropped into a location for processing. Engineers have already written code to determine a successful or unsuccessful application, as well as creating membership IDs for successful applications. You may use the processed datasets from section 1 as reference. Successful applications should be sent to a location for storage and reference. 
 
 The e-commerce company also requires you to set up a database for their sales transactions. 
-Set up a PostgreSQL database using the Docker [image](https://hub.docker.com/_/postgres) provided. We expect at least a Dockerfile which will stand up your database with the DDL statements to create the necessary tables.vYou are required to produce  entity-relationship diagrams as necessary to illustrate your design, along with the DDL statements that will be required to stand up the database. 
+Set up a PostgreSQL database using the Docker [image](https://hub.docker.com/_/postgres) provided. We expect at least a Dockerfile which will stand up your database with the DDL statements to create the necessary tables. You are required to produce entity-relationship diagrams as necessary to illustrate your design, along with the DDL statements that will be required to stand up the database. 
 The following are known for each item listed for sale on the e-commerce website:
 - Item Name
 - Manufacturer Name
@@ -63,14 +63,14 @@ Each transaction made by a member contains the following information:
 - Total items weight
 
 Analysts from the e-commerce company will need to query some information from the database. Below are 2 of the sample queries from the analysts. Do note to design your database to account for a wide range of business use cases and queries. 
-You are tasked to write a SQL statement for each of the following task:
+You are tasked to write a SQL statement for each of the following tasks:
 1. Which are the top 10 members by spending
-2. Which are the top 3 items that are frequently brought by members
+2. Which are the top 3 items that are frequently bought by members
 
 
 ---
 
-## Section3: System Design
+## Section 3: System Design
 
 ### Design 1
 We will be referencing the database from Section2 in this design. This database will be used by several teams within the company to track the orders of members. You are required to implement a strategy for accessing this database based on the various teams' needs. These teams include:
@@ -91,7 +91,7 @@ You are designing data infrastructure on the cloud for a company whose main busi
 
 The company has a web application which allows users to upload images to the cloud using an API. There is also a separate web application which hosts a Kafka stream that uploads images to the same cloud environment. This Kafka stream has to be managed by the company's engineers. 
 
-Code has already been written by the company's software engineers to process the images. This code has to be hosted on the cloud. For archival purposes, the images and its metadata has to be stored in the cloud environment for 7 days, after which it has to be purged from the environment for compliance and privacy. The cloud environment should also host a Business Intelligence resource where the company's analysts can access and perform analytical computation on the data stored.
+Code has already been written by the company's software engineers to process the images. This code has to be hosted on the cloud. For archival purposes, the images and their metadata have to be stored in the cloud environment for 7 days, after which they have to be purged from the environment for compliance and privacy. The cloud environment should also host a Business Intelligence resource where the company's analysts can access and perform analytical computation on the data stored.
 
 As a technical lead of the company, you are required to produce a system architecture diagram (Visio, PowerPoint, draw.io) depicting the end-to-end flow of the aforementioned pipeline. You may use any of the cloud providers (e.g. AWS, Azure, GCP) to host the environment. The architecture should specifically address the requirements/concerns above. 
 
